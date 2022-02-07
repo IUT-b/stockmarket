@@ -74,10 +74,10 @@ start, end  = st.slider('シミュレーション期間',
 
 
 # 全期間データ
-df1=data.DataReader(invest[0],'stooq',start_original,end_original)
+df1=data.DataReader(invest.head(1),'stooq',start_original,end_original)
 df1=df1.iloc[::-1]
 date1=df1.index
-df2=data.DataReader(invest[1],'stooq',start_original,end_original)
+df2=data.DataReader(invest.tail(0),'stooq',start_original,end_original)
 df2=df2.iloc[::-1]
 date2=df2.index
 
