@@ -12,16 +12,8 @@ from datetime import timedelta, datetime
 st.write('積立投資・ドルコスト平均法のシミュレーション')
 
 # 投資先選択
-invest = st.sidebar.radio('投資先',['ダウ平均株価', 'QQQ'])
-if invest=='ダウ平均株価':
-    invest='NY Dow'
-    invest2='^DJI'
-elif invest=='QQQ':
-    invest='QQQ'
-    invest2='QQQ'
-# elif invest=='ナスダック総合指数':
-#     invest='NASDAQ'
-#     invest2='^NDQ'
+invest1 = st.sidebar.radio('投資先',['^DJI', 'QQQ'])
+invest2 = st.sidebar.radio('投資先',['^DJI', 'QQQ'])
 
 
 
@@ -40,7 +32,7 @@ start, end  = st.slider('シミュレーション期間',
                   )
 
 # 全期間データ
-df1=data.DataReader(invest2,'stooq',start_original,end_original)
+df1=data.DataReader(invest1,'stooq',start_original,end_original)
 df1=df1.iloc[::-1]
 date1=df1.index
 df2=data.DataReader(invest2,'stooq',start_original,end_original)
