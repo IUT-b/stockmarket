@@ -7,9 +7,7 @@ import datetime as dt
 from dateutil.relativedelta import relativedelta
 from datetime import timedelta, datetime
 
-# st.title('積立投資シミュレーション')
-# st.header('積立投資・ドルコスト平均法シミュレーション')
-st.write('積立投資・ドルコスト平均法のシミュレーション')
+st.title('株価ダータ')
 
 # 投資先選択
 invest1 = st.sidebar.radio('投資先',['^DJI', 'QQQ'])
