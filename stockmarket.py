@@ -124,4 +124,4 @@ start, end  = st.slider('シミュレーション期間',
 
 
 
-st.pyplot(fig)
+# st.pyplot(fig)
