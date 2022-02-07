@@ -53,7 +53,7 @@ ax1.tick_params(labelsize=7)
 ax2 = ax1.twinx()
 ax2.plot(date2, df2['Close'],label=invest2)
 ax2.set_ylabel(invest2+'(USD)')
-ax2.legend()
+ax2.legend(loc='center left')
 ax2.tick_params(labelsize=7)
 
 ax3 = fig.add_subplot(2,1,2)
