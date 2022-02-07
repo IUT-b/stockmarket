@@ -66,7 +66,7 @@ ax2.legend()
 ax2.tick_params(labelsize=7)
 
 ax3 = fig.add_subplot(2,1,2)
-ax3.plot(date, df['Close'],label=invest,color='black')
+ax3.plot(date1, df1['Close'],label=invest,color='black')
 ax3.set_title('simulation')
 ax3.set_xlabel('date')
 ax3.set_ylabel(invest+'(USD)')
