@@ -30,9 +30,11 @@ start, end  = st.slider('シミュレーション期間',
 df1=data.DataReader(invest[0],'stooq',start_original,end_original)
 df1=df1.iloc[::-1]
 date1=df1.index
+date12=date1[start:end]
 df2=data.DataReader(invest[-1],'stooq',start_original,end_original)
 df2=df2.iloc[::-1]
 date2=df2.index
+date22=date2[start:end]
 
 # グラフ
 fig = plt.figure()
@@ -53,7 +55,7 @@ ax2.legend(loc='center left')
 ax2.tick_params(labelsize=7)
 
 ax3 = fig.add_subplot(2,1,2)
-ax3.plot(date1[start:end], df1.loc[start:end,'Close'],label=invest[0],color='red')
+ax3.plot(date12, df1.loc[start:end,'Close'],label=invest[0],color='red')
 ax3.set_xlabel('date')
 ax3.set_ylabel(invest[0]+'(USD)')
 ax3.legend()
@@ -62,7 +64,7 @@ ax3.tick_params(labelsize=7)
 
 ax4 = ax3.twinx()
 ax4.set_ylabel(invest[-1]+'(USD)')
-ax4.plot(date2[start:end], df2.loc[start:end,'Close'],label=invest[-1],color='blue')
+ax4.plot(date22, df2.loc[start:end,'Close'],label=invest[-1],color='blue')
 ax4.legend(loc='center left')
 ax4.tick_params(labelsize=7)
 
