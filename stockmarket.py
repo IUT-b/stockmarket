@@ -14,7 +14,7 @@ st.title('株価ダータ')
 # invest2=invest1
 # invest2 = st.sidebar.radio('投資先',['^DJI', 'QQQ'])
 
-invest=st.sidebar.multiselect('投資先',['^DJI', 'QQQ'])
+invest=st.sidebar.multiselect('投資先',['^DJI', 'QQQ'],default=['^DJI', 'QQQ'])
 st.write(invest)
 
 # 株価取得期間
