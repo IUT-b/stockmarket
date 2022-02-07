@@ -30,11 +30,11 @@ start, end  = st.slider('シミュレーション期間',
 df1=data.DataReader(invest[0],'stooq',start_original,end_original)
 df1=df1.iloc[::-1]
 date1=df1.index
-date12=date1[start:end]
+date12=df1[start:end].index
 df2=data.DataReader(invest[-1],'stooq',start_original,end_original)
 df2=df2.iloc[::-1]
 date2=df2.index
-date22=date2[start:end]
+date22=df2[start:end].index
 
 # グラフ
 fig = plt.figure()
