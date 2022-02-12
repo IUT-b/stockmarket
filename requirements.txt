@@ -3,5 +3,6 @@ pandas_datareader
 pandas
 matplotlib
 numpy
+plotly==5.6.0
 plotly.graph_objs
 plotly.subplots
