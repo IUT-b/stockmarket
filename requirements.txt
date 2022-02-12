@@ -3,4 +3,5 @@ pandas_datareader
 pandas
 matplotlib
 numpy
-plotly
+plotly.graph_objs
+plotly.subplots
