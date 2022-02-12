@@ -94,3 +94,4 @@ ax6.legend()
 ax6.tick_params(labelsize=7)
 
 st.pyplot(fig)
+
