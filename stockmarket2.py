@@ -118,3 +118,4 @@ def sim(df,start2,end2):
 
 if st.button('開始'):
     sim(df,start2,end2)
+    fig.write_html('first_figure2.html', auto_open=True)
