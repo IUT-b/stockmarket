@@ -115,7 +115,7 @@ def sim(df,start2,end2):
                  row=1,
                  col=1)
     fig.show()
-
+    fig.write_html('first_figure2.html', auto_open=True)
+    
 if st.button('開始'):
     sim(df,start2,end2)
-    fig.write_html('first_figure2.html', auto_open=True)
